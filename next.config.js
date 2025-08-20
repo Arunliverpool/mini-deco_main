@@ -1,17 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-
-  // TEMP: unblock Vercel build (ESLint/type errors won't fail build)
-  eslint: { ignoreDuringBuilds: true },
-  typescript: { ignoreBuildErrors: true },
-
-  // If you load images from external URLs (e.g., Ready Player Me)
+  eslint: { ignoreDuringBuilds: true },     // TEMP: unblock build
+  typescript: { ignoreBuildErrors: true },  // TEMP: unblock build
   images: {
-    remotePatterns: [
-      { protocol: "https", hostname: "**" } // loosen for now; tighten later
-      // or: domains: ["cdn.readyplayer.me"]
-    ],
+    remotePatterns: [{ protocol: "https", hostname: "**" }],
   },
 };
 module.exports = nextConfig;
+
