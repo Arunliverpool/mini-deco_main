@@ -1,8 +1,5 @@
 import Link from 'next/link';
-// pages/index.js
-export default function Home() {
-  return <main style={{padding: 24}}>It works ✅</main>;
-}
+
 
 export default function Home() {
   return (
